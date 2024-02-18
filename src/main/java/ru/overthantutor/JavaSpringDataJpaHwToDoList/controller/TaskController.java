@@ -49,7 +49,7 @@ public class TaskController {
     }
 
     /**
-     * Send task which are filtered by status
+     * Send a task filtered by status
      * @param taskStatus status of task
      * @return           filtered by status tasks
      */
@@ -62,7 +62,7 @@ public class TaskController {
      * Updating status of task
      * @param id   task id
      * @param task task with updated status
-     * @return     updated task or null if it is not exists
+     * @return     updated task or null if it does not exist
      */
     @PutMapping("/{id}")
     public Task updateTaskStatus(@PathVariable("id") UUID id, @RequestBody Task task) {
@@ -77,7 +77,7 @@ public class TaskController {
     /**
      * Deleting task
      * @param id task id
-     * @return   deleted task or null if it is not exists
+     * @return   deleted task or null if it does not exist
      */
     @DeleteMapping("/{id}")
     public Task deleteTask(@PathVariable("id") UUID id) {
